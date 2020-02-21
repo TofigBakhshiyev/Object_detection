@@ -3,12 +3,12 @@ import cv2
 
 cap = cv2.VideoCapture('./out_dublin.mp4')
 
-all_rows = open('./Ex_Files_Deep_Learning_OpenCV/Exercise Files/model/synset_words.txt').read().strip().split("\n")
+all_rows = open('Path/model/synset_words.txt').read().strip().split("\n")
 
 classes = [r[r.find(' ') + 1:] for r in all_rows]
 
-net = cv2.dnn.readNetFromCaffe('./Ex_Files_Deep_Learning_OpenCV/Exercise Files/model/bvlc_googlenet.prototxt',
-'./Ex_Files_Deep_Learning_OpenCV/Exercise Files/model/bvlc_googlenet.caffemodel') 
+net = cv2.dnn.readNetFromCaffe('Path/model/bvlc_googlenet.prototxt',
+'Path/model/bvlc_googlenet.caffemodel') 
 
 if cap.isOpened() == False:
     print('Cannot open video file or stream') 

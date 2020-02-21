@@ -20,10 +20,10 @@ args = parser.parse_args()
 
 # Load names of classes from coco
 
-classes = open('./Ex_Files_Deep_Learning_OpenCV/Exercise Files/YOLOv3/coco.names').read().strip().split('\n')
+classes = open('Path/YOLOv3/coco.names').read().strip().split('\n')
 
-net = cv2.dnn.readNetFromDarknet("./Ex_Files_Deep_Learning_OpenCV/Exercise Files/YOLOv3/yolov3.cfg", 
-"./Ex_Files_Deep_Learning_OpenCV/Exercise Files/YOLOv3/yolov3.weights")
+net = cv2.dnn.readNetFromDarknet("Path/YOLOv3/yolov3.cfg", 
+"Path/YOLOv3/yolov3.weights")
 net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
 net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
 
